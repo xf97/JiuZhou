@@ -1,15 +1,11 @@
-pragma solidity 0.5.0;
+pragma solidity 0.4.21;
 
-//From project not-so-smart-contract
+//from project not-so-smart-contract
 
 contract Reentrance {
     mapping (address => uint256) userBalance;
-    
-    constructor() public{
-        
-    }
    
-    function getBalance(address u) view public returns(uint){
+    function getBalance(address u) public constant returns(uint){
         return userBalance[u];
     }
 
@@ -20,8 +16,10 @@ contract Reentrance {
     function withdrawBalance() public {
         // send userBalance[msg.sender] ethers to msg.sender
         // if mgs.sender is a contract, it will call its fallback function
-        require(userBalance[msg.sender] >= 0);
-        msg.sender.call.value(userBalance[msg.sender])("");
+        if( ! (msg.sender.call.value(userBalance[msg.sender])() ) ){
+            throw;
+        }
         userBalance[msg.sender] = 0;
     }   
 }
+

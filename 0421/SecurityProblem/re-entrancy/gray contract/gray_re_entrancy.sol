@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.4.21;
 
 contract EtherStore{
     
@@ -7,7 +7,7 @@ contract EtherStore{
     mapping( address => uint256) public lastWithdrawTime;
     mapping( address => uint256) public balances;
     
-    constructor() public{
+    function EtherStore() public{
         
     }
     
@@ -24,8 +24,9 @@ contract EtherStore{
         require(now >= lastWithdrawTime[msg.sender] + 1 weeks);
         balances[msg.sender] -= _weiToWithdraw;
         lastWithdrawTime[msg.sender] = now;
+        
         reEntrancyMutex = true;
-        msg.sender.call.value(_weiToWithdraw)("");
+        msg.sender.call.value(_weiToWithdraw)();
         reEntrancyMutex =false;
     }
 }
