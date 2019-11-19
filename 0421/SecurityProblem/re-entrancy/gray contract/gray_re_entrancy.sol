@@ -1,5 +1,7 @@
 pragma solidity 0.4.21;
 
+//from internet
+
 contract EtherStore{
     
     bool reEntrancyMutex = false;
