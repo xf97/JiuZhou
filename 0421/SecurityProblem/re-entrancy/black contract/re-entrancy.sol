@@ -2,6 +2,7 @@ pragma solidity 0.4.21;
 
 //from project not-so-smart-contract
 
+
 contract Reentrance {
     mapping (address => uint256) userBalance;
    
