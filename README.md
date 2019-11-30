@@ -1,2 +1,2 @@
-# Test-case-of-analysisDirector
-This is set of test cases that we use to evaluate the performance of Ethereum smart contract analysis tool. It is a collection of problem smart contracts. These files are part of the analysisDirector project.
+# JiuZhou(九州)
+JiuZhou is a collection of Ethereum problem smart contracts. The reason why it is named **JiuZhou** is that in ancient Chinese legends, **JiuZhou** is the land of the world. We hope to make this data set the standard to judge the ability of Ethereum smart contract analysis tool. In addition, we will provide abstract representations of each problem, which can promote the continuous development of this field.
