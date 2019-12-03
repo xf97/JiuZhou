@@ -2,9 +2,24 @@ pragma solidity 0.4.24;
 
 //based on swc
 
-contract CryptoRoulette {
-    bytes32 private secretBytes;
+// CryptoRoulette
+//
+// Guess the number secretly stored in the blockchain and win the whole contract balance!
+// A new number is randomly chosen after each try.
+//
+// To play, call the play() method with the guessed number (1-20).  Bet price: 0.1 ether
 
+
+/*warning!
+The miner can obtain the value of secretNumber. Please do not use this 
+contract or the repair contract of this contract to deploy to Ethereum, 
+otherwise the miner will gain an unfair competitive advantage.
+*/
+
+contract CryptoRoulette {
+
+    uint256 private secretNumber; //miner can see its value
+    uint256 public lastPlayed;
     uint256 public betPrice = 0.1 ether;
     address public ownerAddr;
 
@@ -14,35 +29,38 @@ contract CryptoRoulette {
     }
     Game[] public gamesPlayed;
 
-    constructor(uint256 secretNumber) public {
+    function CryptoRoulette() public {
         ownerAddr = msg.sender;
-        shuffle(secretNumber);
+        shuffle();
     }
 
-    function shuffle(uint256 secretNumber) internal {
-        require(secretNumber >= 1 && secretNumber <= 20);
-        secretBytes = keccak256(abi.encode(secretNumber, 0));
+    function shuffle() internal {
+        // randomly set secretNumber with a value between 1 and 20
+        secretNumber = uint8(sha3(now, block.blockhash(block.number-1))) % 20 + 1;
     }
 
     function play(uint256 number) payable public {
         require(msg.value >= betPrice && number <= 10);
 
-        Game game;  //this is a storage variable
+        Game game;	//this is a uninitialized storage variable
         game.player = msg.sender;
         game.number = number;
         gamesPlayed.push(game);
 
-        if (keccak256(abi.encode(number,0)) == secretBytes) {
+        if (number == secretNumber) {
             // win!
-            msg.sender.transfer(address(this).balance);
+            msg.sender.transfer(this.balance);
         }
+
+        shuffle();
+        lastPlayed = now;
     }
 
     function kill() public {
-        if (msg.sender == ownerAddr) {
-            selfdestruct(msg.sender);
+        if (msg.sender == ownerAddr && now > lastPlayed + 1 days) {
+            suicide(msg.sender);
         }
     }
 
-    function() external payable { }
+    function() public payable { }
 }
