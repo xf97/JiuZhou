@@ -1,4 +1,4 @@
-praga solidity 0.5.0;
+pragma solidity 0.5.0;
 
 //use bytes instead of byte[]
 
