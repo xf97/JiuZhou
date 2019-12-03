@@ -11,6 +11,7 @@ contract waste1{
 
 	function pushGrade(uint256 _grade) public{
 		require(msg.sender == owner);
+		grades.push(_grade);
 	}
 
 	//The array length is calculated for each loop, but the array length remains the same

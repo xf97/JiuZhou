@@ -11,6 +11,7 @@ contract waste1{
 
 	function pushGrade(uint256 _grade) public{
 		require(msg.sender == owner);
+		grades.push(_grade);
 	}
 
 	//Extract loop invariants
@@ -25,7 +26,7 @@ contract waste1{
 	function initGrades(uint256 _length) internal{
 		uint256 _balance = address(this).balance;
 		for(uint256 i = 0; i < _length; i++){
-			grades.push(address(this).balance);
+			grades.push(_balance);
 		}
 	}
 }
