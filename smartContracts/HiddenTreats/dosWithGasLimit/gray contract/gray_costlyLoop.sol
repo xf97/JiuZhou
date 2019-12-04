@@ -29,7 +29,7 @@ contract gray_ConstlyLoop{
     function addOne(uint256 _length) public{
         require(msg.sender == owner);
         uint256 boundary = index + _length;
-        if(boundary >= element.length)
+        if(boundary > element.length)
             boundary = element.length;
         for(uint256 i = index; i < boundary; i++)
             element[i] += 1;
