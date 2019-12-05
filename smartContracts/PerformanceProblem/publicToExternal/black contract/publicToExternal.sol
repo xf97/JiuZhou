@@ -1,6 +1,6 @@
 pragma solidity 0.5.0;
 
-//Happy birthday to contract for the first twenty weeks. Give him money
+//Happy birthday to contract for the first twenty  in a week. Give him money
 
 contract waste3{
     uint256 public contractBirthday;
