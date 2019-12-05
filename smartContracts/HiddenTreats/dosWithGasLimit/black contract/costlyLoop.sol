@@ -2,7 +2,7 @@ pragma solidity 0.5.0;
 
 //When you add 1 to each element of a large array of integers, break the addition step into several steps.
 
-contract ConstlyLoop{
+contract CostlyLoop{
     uint256[] public element;   //a dynamic array
     uint256 public constant addNum = 1;
     address public owner;

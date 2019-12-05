@@ -2,7 +2,7 @@ pragma solidity 0.4.24;
 
 
 contract varIsNotSafe{
-    addresses[] public user;
+    address[] public user;
     uint256[] public balances;
     address public owner;
     
@@ -21,7 +21,7 @@ contract varIsNotSafe{
     //refund operation never takes effect. Because the type i is inferred to be uint8, the maximum value is 255.
     function refundAll() external{
         require(msg.sender == owner);
-        _length = user.length;
+        uint256 _length = user.length;
         for(var i = 0; i < _length; i++){
             user[i].send(balances[i]);
         }

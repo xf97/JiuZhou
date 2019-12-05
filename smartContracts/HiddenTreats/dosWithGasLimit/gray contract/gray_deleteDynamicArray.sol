@@ -32,7 +32,7 @@ contract gray_C {
             delete addresses[i];
             delete amounts[i];
         }
-        if(boundary == element.length)
+        if(boundary == addresses.length)
             index = 0;  //reset index
         else
             index += _length;   //update index

@@ -1,6 +1,6 @@
 pragma solidity 0.5.0;
 
-//from smartcheck
+//based on smartcheck
 
 contract gray_BadMarketPlace {
 	mapping(address => uint256) public balance;
