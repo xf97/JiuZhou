@@ -1,24 +1,21 @@
 pragma solidity 0.4.24;
 
-//based on swc
 
 /*
-The address and parameters of the delegate call are controlled by 
-external input, which is dangerous, meaning that an attacker can 
-load any piece of code that is executed in this contract.
+Although the contract specifies the whitelist for the delegate call, 
+the data for the delegate call is externally controlled. The principal 
+can call any function he specifies.
 */
 
 //One solution is to add the white list of delegate addresses
 
-contract gray_Proxy {
+contract delegateInjection {
   address public owner;
   address[] public whiteList;
-  bytes public data;
 
-  constructor(bytes memory _data) public payable{
+  constructor() public payable{
     owner = msg.sender;  
     require(msg.value > 0);
-    data = _data;
   }
   
   modifier onlyOwner{
@@ -42,7 +39,7 @@ contract gray_Proxy {
       whiteList.push(_addr);
   }
 
-  function forward(address callee) public isTrusted(callee){
+  function forward(address callee, bytes memory data) public isTrusted(callee){
     require(callee.delegatecall(data));
   }
   
