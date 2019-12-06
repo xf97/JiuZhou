@@ -1,6 +1,6 @@
-pragma solidity 0.4.21;
+pragma solidity 0.4.24;
 
-//from project not-so-smart-contract
+//based on not-so-smart-contract
 
 
 contract Reentrance {

@@ -1,6 +1,8 @@
-pragma solidity 0.4.21;
+pragma solidity 0.5.0;
 
-//from internet
+/*
+Using a mutex can effectively evade re-entrancy attacks
+*/
 
 contract EtherStore{
     
@@ -8,8 +10,10 @@ contract EtherStore{
     uint256 public withdrawLimit = 1 ether;
     mapping( address => uint256) public lastWithdrawTime;
     mapping( address => uint256) public balances;
+    bool public flag;
+    bytes public data;
     
-    function EtherStore() public{
+    constructor() public{
         
     }
     
@@ -20,15 +24,13 @@ contract EtherStore{
     function withdrawFunds(uint256 _weiToWithdraw) public{
         require(!reEntrancyMutex);
         require(balances[msg.sender] >= _weiToWithdraw);
-        
         require(_weiToWithdraw <= withdrawLimit);
-        
         require(now >= lastWithdrawTime[msg.sender] + 1 weeks);
         balances[msg.sender] -= _weiToWithdraw;
         lastWithdrawTime[msg.sender] = now;
-        
         reEntrancyMutex = true;
-        msg.sender.call.value(_weiToWithdraw)();
+        (flag, data) = msg.sender.call.value(_weiToWithdraw)("");
+        require(flag);
         reEntrancyMutex =false;
     }
 }
