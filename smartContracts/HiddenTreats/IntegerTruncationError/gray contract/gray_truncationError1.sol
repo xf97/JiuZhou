@@ -1,6 +1,10 @@
 pragma solidity 0.5.0;
 
-//From Osiris
+//based on Osiris
+
+/*
+Or, if there is no loss of accuracy when truncation occurs, it can be truncated.
+*/
 
 contract truncationError{
     mapping(address => uint32) public balances;
