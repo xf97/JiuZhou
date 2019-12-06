@@ -7,7 +7,6 @@ the data for the delegate call is externally controlled. The principal
 can call any function he specifies.
 */
 
-//One solution is to add the white list of delegate addresses
 
 contract delegateInjection {
   address public owner;

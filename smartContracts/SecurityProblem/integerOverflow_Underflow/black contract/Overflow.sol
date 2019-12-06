@@ -1,11 +1,11 @@
-pragma solidity 0.4.21;
+pragma solidity 0.5.0;
 
-//From not-so-smart-contract
+//based on not-so-smart-contract
 
 contract Overflow {
     uint private sellerBalance=0;
     
-  function Overflow() public{
+  constructor() public{
       
   }
     
