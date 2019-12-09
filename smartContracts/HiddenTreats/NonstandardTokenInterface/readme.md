@@ -1,7 +1,7 @@
 # Non-standard token interface
 There are seven main problems with non-standard token interfaces:
 1. Missing token standard state variable
-2. Missing token standard functions
+2. Missing token standard functions or events
 3. Raises an exception in a function that should return a Boolean value
 4. The function does not return a value of the specified type according to the token standard
 5. There are no recorded events in the functions that should record events (such as the approve, transfer, and transferFrom functions specified by the ERC20 standard)
