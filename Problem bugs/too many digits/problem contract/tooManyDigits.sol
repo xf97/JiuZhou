@@ -5,7 +5,7 @@ pragma solidity 0.5.0;
 contract tooManyDigits{
     uint256 public oncePrice = 1000000000000000000; //10^18 
     address[] public users;
-    address public payable owner;
+    address payable owner;
     
     constructor() public{
         owner = msg.sender;
