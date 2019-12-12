@@ -21,12 +21,17 @@ contract Ownable {
 
  
 contract IERC721 {
-	event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);
+    //1. The parameters of the event are not declared indexd
+	event Transfer(address from, address indexed to, uint256 indexed tokenId);
 	event Approval(address indexed owner, address indexed approved, uint256 indexed tokenId);
 	event ApprovalForAll(address indexed owner, address indexed operator, bool approved);
-	function balanceOf(address owner) public view returns (uint256 balance);
+	//2. The function does not return a value of the specified type as per code standards
+	function balanceOf(address owner) public view returns (uint8 balance);
 	function ownerOf(uint256 tokenId) public view returns (address owner);
+	//3.Lack of token standard prescribed method
+	/*
 	function approve(address to, uint256 tokenId) public;
+	*/
 	function getApproved(uint256 tokenId) public view returns (address operator);
 	function setApprovalForAll(address operator, bool _approved) public;
 	function isApprovedForAll(address owner, address operator) public view returns (bool);
