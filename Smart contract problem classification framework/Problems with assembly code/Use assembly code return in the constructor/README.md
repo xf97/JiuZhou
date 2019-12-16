@@ -1,2 +1,0 @@
-# Return in constructor
-The contract is not fully formed when the constructor is executed. Returning the result in the constructor makes the contract deployment process inconsistent with the intuitive experience.

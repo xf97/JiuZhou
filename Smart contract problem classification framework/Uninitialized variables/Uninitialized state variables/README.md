@@ -1,2 +1,0 @@
-# Uninitialized local and state variables
-Contracts declare state and local variables but do not initialize them. This can cause the contract to behave differently than the developer expects in some cases, and each variable will be assigned a default value. Consider giving each variable an initial value.
