@@ -1,0 +1,3 @@
+## Transaction order dependence
+Miners can decide which transactions are packaged into the block and the order in which they are packaged. If the result of the pre-order transaction will have an impact on the result of this transaction, the miner may gain benefits by controlling the order in which the transactions are packaged. At present, the main impact of this bug is the **ERC20 standard approve function**.
+Bug type: context-related bug

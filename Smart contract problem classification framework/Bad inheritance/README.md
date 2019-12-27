@@ -1,0 +1,2 @@
+# Bad inheritance
+*Solidity* supports inheritance, and multiple inheritance. Multiple inheritance makes the order of contract inheritance important, *Solidity*'s multiple inheritance is similar to python. Incorrect contract inheritance can cause many problems.

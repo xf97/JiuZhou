@@ -1,0 +1,56 @@
+pragma solidity 0.5.0;
+
+//based on swc
+
+contract transaction_malleablity{
+  mapping(address => uint256) public balances;
+  //mapping(bytes32 => bool) public signatureUsed;
+
+  constructor(address[] memory owners, uint[] memory init) public{
+    require(owners.length == init.length);
+    uint256 _length = owners.length;
+    for(uint i=0; i < _length; i ++){
+      balances[owners[i]] = init[i];
+    }
+  }
+
+  function transfer(bytes calldata _signature, address _to, uint256 _value, uint256 _gasPrice, uint256 _nonce) external returns (bool){
+      //bytes32 txid = keccak256(abi.encodePacked(getTransferHash(_to, _value, _gasPrice, _nonce), _signature));
+      //require(!signatureUsed[txid]);
+      address from = recoverTransferPreSigned(_signature, _to, _value, _gasPrice, _nonce);
+      require(balances[from] > _value);
+      balances[from] -= _value;
+      require(balances[_to] + _value >= balances[_to]);
+      balances[_to] += _value;
+      //signatureUsed[txid] = true;
+    }
+
+    function recoverTransferPreSigned(bytes memory _sig, address _to, uint256 _value, uint256 _gasPrice, uint256 _nonce) internal view returns (address recovered){
+        return ecrecoverFromSig(getSignHash(getTransferHash(_to, _value, _gasPrice, _nonce)), _sig);
+    }
+
+    function getTransferHash(address _to, uint256 _value, uint256 _gasPrice, uint256 _nonce) internal view returns (bytes32 txHash) {
+        return keccak256(abi.encode(address(this), bytes4(0x1296830d), _to, _value, _gasPrice, _nonce));
+    }
+
+    function getSignHash(bytes32 _hash) internal pure returns (bytes32 signHash){
+        return keccak256(abi.encode("\x19Ethereum Signed Message:\n32", _hash));
+    }
+
+    function ecrecoverFromSig(bytes32 hash, bytes memory sig) internal pure returns (address recoveredAddress){
+        bytes32 r;
+        bytes32 s;
+        uint8 v;
+        if (sig.length != 65) return address(0);
+        assembly {
+            r := mload(add(sig, 32))
+            s := mload(add(sig, 64))
+            v := byte(0, mload(add(sig, 96)))
+        }
+        if (v < 27) {
+          v += 27;
+        }
+        if (v != 27 && v != 28) return address(0);
+        return ecrecover(hash, v, r, s);
+    }
+}

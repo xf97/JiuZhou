@@ -1,0 +1,2 @@
+## One way flow of ethers
+Money has to flow into contracts as well as out to have value. In *Ethereum*, even if the contract is not willing to accept **ethers**, other addresses can also be forced to send **ethers** to this contract. If these **ethers** affect the features of this contract, then this contract will be harmed. On the other hand, if the contract is willing to accept **ethers**, but because of the wrong development, the **ether** in the contract cannot be transferred out at all, which will also cause the **ether** in the contract to be permanently locked.
