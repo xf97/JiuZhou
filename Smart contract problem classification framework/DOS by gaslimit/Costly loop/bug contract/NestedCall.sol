@@ -1,4 +1,4 @@
-pragma solidity 0.5.1;
+pragma solidity 0.5.0;
 
 //When you add 1 to each element of a large array of integers, break the addition step into several steps.
 
@@ -25,11 +25,7 @@ contract NestedCall{
     //When the loop is executed, an attacker can keep adding array elements, causing the loop to keep running.
     function addOne() public onlyOwner{
         require(msg.sender == owner);
-        /*
-        When the length of the array is greater than or equal to 256, 
-        the loop is an infinite loop.
-        */
-        for(uint8 i = 0; i < element.length; i++)
+        for(uint256 i = 0; i < element.length; i++)
             element[i] += 1;
     }
 }

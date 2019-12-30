@@ -1,7 +1,8 @@
 pragma solidity 0.5.0;
 
+//When you add 1 to each element of a large array of integers, break the addition step into several steps.
 
-contract NoNestedCall1{
+contract gray_infiniteLoop{
     uint256[] public element;   //a dynamic array
     uint256 public constant addNum = 1;
     address public owner;
@@ -15,17 +16,22 @@ contract NoNestedCall1{
         _;
     }
     
-    //only owner can push element into this array
+    //only owner can write data into this array
     function appendDate(uint256 _ele) public onlyOwner{
         require(msg.sender == owner);
         element.push(_ele);
+        //Array length is not allowed to exceed 256.
+        require(element.length < 256);
     }
     
-   //One way to fix this is to record the length before the loop begins and only owner can add new element
     function addOne() public onlyOwner{
         require(msg.sender == owner);
         uint256 _length = element.length;
-        for(uint256 i = 0; i < _length; i++)
-            element[i] += 1;
+        /*
+        When the length of the array is greater than or equal to 256, 
+        the loop is an infinite loop.
+        */
+        for(uint8 i = 0; i < _length; i++)
+            element[i] += addNum;
     }
 }
