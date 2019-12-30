@@ -1,5 +1,5 @@
 // This code contains a vulnerability - do not use it!
-//from smartcheck
+//based on smartcheck
 pragma solidity 0.5.0;
 
 contract OpenWallet {
