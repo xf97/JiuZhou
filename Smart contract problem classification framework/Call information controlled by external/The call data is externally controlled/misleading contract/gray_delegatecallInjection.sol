@@ -10,10 +10,12 @@ can call any function he specifies.
 
 contract delegateInjection {
   address public owner;
+  bytes public data;
 
-  constructor() public payable{
+  constructor(bytes memory _data) public payable{
     owner = msg.sender;  
     require(msg.value > 0);
+    data = _data;
   }
   
   modifier onlyOwner{
@@ -22,8 +24,12 @@ contract delegateInjection {
   }
   
 
-  function forward(bytes memory data) public {
-    owner.delegatecall(data);
+  function forward() external {
+    _forward(data);
+  }
+  
+  function _forward(bytes memory _data) internal{
+      owner.delegatecall(_data);
   }
   
   function withdraw() external{

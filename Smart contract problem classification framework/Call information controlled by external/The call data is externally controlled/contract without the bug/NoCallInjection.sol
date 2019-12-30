@@ -2,11 +2,6 @@ pragma solidity 0.5.0;
 
 //based on knowsec404
 
-/*
-Another injection attack is through the call function, as shown in 
-the following contract: an external user can call the secret funct-
-ion as the contract by specifying parameters to the info function.
-*/
 
 //One solution is to manually specify the call data
 
