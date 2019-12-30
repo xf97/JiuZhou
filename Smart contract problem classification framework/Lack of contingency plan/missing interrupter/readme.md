@@ -1,0 +1,2 @@
+## missing interrupter
+When an emergency occurs to a contract, for exaeple when an **ethers** are being stolen by a hacker, an emergency plan should be prepared. when *The Dao* is attacked, if the owner can use a **selfdestruct** function to transfer the all **ethers** of the contract to a standby account, it can stop the loss in time. The simplest emergency plan is a **selfdestruct** function controlled by reasonable authority.
