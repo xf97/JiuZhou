@@ -1,20 +1,15 @@
 pragma solidity 0.5.0;
 
 
-//One possible solution is for the contract owner to specify msg.data
-
-contract gray_DelegateInjection {
+contract gray_delegateInjection {
   address public owner;
+  bytes data;
   address[] public whiteList;
-  bytes public data;
 
-  constructor() public payable{
+  constructor(bytes memory _data) public payable{
     owner = msg.sender;  
     require(msg.value > 0);
-  }
-  
-  function setData(bytes calldata   _data) external onlyOwner{
-      data = _data;
+    data = _data;
   }
   
   modifier onlyOwner{
@@ -22,23 +17,25 @@ contract gray_DelegateInjection {
       _;
   }
   
-  modifier isTrusted(address _addr){
-      uint256 _length = whiteList.length;
+  modifier onlyList(address _addr){
       bool flag = false;
-      for(uint256 i = 0; i < _length; i++){
+      uint256 _length = whiteList.length;
+      for(uint256 i = 0; i<_length; i++){
           if(whiteList[i] == _addr){
               flag = true;
+              break;
           }
       }
       require(flag);
-      _;   
+      _;
   }
   
-  function addTurstAddr(address _addr) external onlyOwner{
+  function addNewOne(address _addr) external onlyOwner{
       whiteList.push(_addr);
   }
+  
 
-  function forward(address callee) public isTrusted(callee){
+  function forward(address callee) public onlyList(callee){
     callee.delegatecall(data);
   }
   
@@ -46,5 +43,4 @@ contract gray_DelegateInjection {
       require(msg.sender == owner);
       msg.sender.transfer(address(this).balance);
   }
-
 }
