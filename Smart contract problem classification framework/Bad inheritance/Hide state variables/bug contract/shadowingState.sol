@@ -16,7 +16,7 @@ contract FatherContract{
 contract SonContract is FatherContract{
     address owner;
 
-    constructor() public{
+    constructor() public payable{
         owner = msg.sender;
     }
 
