@@ -1,14 +1,15 @@
 pragma solidity 0.5.0;
 
-//based on swc
 
 
-contract Proxy {
+contract gray_Proxy {
   address public owner;
+  bytes data;
 
-  constructor() public payable{
+  constructor(bytes memory _data) public payable{
     owner = msg.sender;  
     require(msg.value > 0);
+    data = _data;
   }
   
   modifier onlyOwner{
@@ -16,12 +17,13 @@ contract Proxy {
       _;
   }
   
-  function forward(address callee, bytes memory data) public {
-    callee.delegatecall(data);
+  function forward() external {
+    owner.delegatecall(data);
   }
   
   function withdraw() external{
       require(msg.sender == owner);
       msg.sender.transfer(address(this).balance);
   }
+
 }
