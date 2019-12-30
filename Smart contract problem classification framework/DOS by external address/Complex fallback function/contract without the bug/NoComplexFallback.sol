@@ -33,7 +33,6 @@ contract gray_complexFallback{
     So the user can only call your function through the 
     call-statement, he can specify the carrying gas.
     */
-    
     function recordPaid() external payable{
         require(msg.value > 0);
         for(uint256 i = 0; i < payer.length; i++){
@@ -42,7 +41,6 @@ contract gray_complexFallback{
         }
     }
     
-    //If you paid, record that you paid.
     function() external payable{
         
     }
