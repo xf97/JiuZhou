@@ -1,7 +1,6 @@
 pragma solidity 0.5.0;
 
 
-
 /*
 If your number is bigger than mine, then you can take all the money
 */
