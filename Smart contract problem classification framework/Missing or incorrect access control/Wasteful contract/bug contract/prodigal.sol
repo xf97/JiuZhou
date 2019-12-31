@@ -13,9 +13,7 @@ contract prodigal{
     }
     
     /*
-    Careless developers forget to use their own written
-    modifiers, allowing anyone to withdraw their contract 
-    balances.
+    Careless developers forget to use the modifier, allowing anyone to withdraw their contract balances.
     */
     function withdraw() external{
         msg.sender.transfer(address(this).balance);
