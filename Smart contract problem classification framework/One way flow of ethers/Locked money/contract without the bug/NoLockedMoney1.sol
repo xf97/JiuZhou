@@ -12,7 +12,7 @@ contract gray_stuffyWallet{
 		require(msg.value > 0);
 	}
 
-	function zero_withdraw() external{
+	function withdraw() external{
 		require(msg.sender == owner);
 		msg.sender.transfer(address(this).balance);
 	}
