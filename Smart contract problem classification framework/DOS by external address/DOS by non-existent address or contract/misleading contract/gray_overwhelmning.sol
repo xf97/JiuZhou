@@ -16,18 +16,18 @@ contract gray_Crowdsale {
     }
     
     //When the overwhelming role fails, change the role address
-    function changeOwner(bytes memory _password) public{
+    function changeOwner(bytes calldata _password) external{
         if(password == keccak256(_password)){
             owner = msg.sender;
         }
     }
 
-    function setRate(uint256 _rate) public  {
+    function setRate(uint256 _rate) external{
         require(owner == msg.sender);
         rate = _rate;
     }
 
-    function setCap(uint256 _cap) public {
+    function setCap(uint256 _cap) external{
         require (msg.sender == owner);
         cap = _cap;
     }
