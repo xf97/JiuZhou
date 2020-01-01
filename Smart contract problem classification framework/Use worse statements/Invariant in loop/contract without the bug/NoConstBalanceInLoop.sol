@@ -9,7 +9,7 @@ contract NoWaste1{
 		initGrades(_length);	
 	}
 
-	function pushGrade(uint256 _grade) public{
+	function pushGrade(uint256 _grade) external{
 		require(msg.sender == owner);
 		grades.push(_grade);
 	}

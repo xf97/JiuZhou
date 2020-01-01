@@ -12,7 +12,7 @@ contract disable_stuffyWallet{
 		require(msg.value > 0);
 	}
 
-	//disabled
+	//However, this function is not available when the contract's balance is greater than 0.
 	function zero_withdraw() external{
 		require(address(this).balance == 0);
 		msg.sender.transfer(address(this).balance);

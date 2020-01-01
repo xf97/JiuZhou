@@ -2,7 +2,7 @@ pragma solidity 0.5.0;
 
 //Happy birthday to contract for the first twenty weeks. Give him money
 
-contract gray_Waste{
+contract NoWaste{
     uint256 public contractBirthday;
     address public owner;
     
@@ -24,11 +24,12 @@ contract gray_Waste{
     }
 }
 
-contract gray_Waste_son is gray_Waste{
+contract NoWasteSon is NoWaste{
     constructor() public{
         
     }
-    function refundToo() public{
+    
+    function refundToo() external{
         refund();
     }
 }

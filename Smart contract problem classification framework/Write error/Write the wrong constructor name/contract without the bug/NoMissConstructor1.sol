@@ -3,7 +3,7 @@ pragma solidity 0.4.24;
 contract NoMissContructor{
     address public owner;
     
-    function MissContructor() public payable{
+    function NoMissContructor() public payable{
         owner = msg.sender;
         require(msg.value > 0);
     }

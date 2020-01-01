@@ -3,9 +3,9 @@ pragma solidity 0.5.0;
 //based on smartcheck
 
 
-contract gray_GreaterOrEqualToZero {
+contract NoGreaterOrEqualToZero {
 
-    function finiteLoop_fixed1(uint border) public returns(uint ans) {
+    function finiteLoop_fixed1(uint border) pure external returns(uint ans) {
         for (uint i = 0; i <= border; i++) {
             ans += i;
         }

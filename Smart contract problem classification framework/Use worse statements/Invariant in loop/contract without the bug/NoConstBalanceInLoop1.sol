@@ -1,6 +1,6 @@
 pragma solidity 0.5.0;
 
-contract gray_waste1{
+contract NoWaste1{
 	address public owner;
 	uint256[] public grades;
 

@@ -14,16 +14,16 @@ contract Wallet {
     function () external payable {
     }
 
-    //only someone or some members of organization can write data into this array.
+    //only owner can write data into this array.
     function PushBonusCode(uint c) public {
         require(msg.sender == owner);
         bonusCodes.push(c);
     }
 	
-    //only someone or some members of organization can write data into this array.
+    //only owner can write data into this array.
     function PopBonusCode() public {
         require(msg.sender == owner);
-        require(0 < bonusCodes.length);	//now, the minimum value of length is zeor, not -1
+        require(0 < bonusCodes.length);	//now, the minimum value of length is zero, not -1
         bonusCodes.length--;
     }
 

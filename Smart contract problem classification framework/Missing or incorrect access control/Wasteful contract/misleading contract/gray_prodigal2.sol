@@ -26,7 +26,6 @@ contract gray_Wallet {
     }
 
     // In an emergency the owner can migrate  allfunds to a different address.
-
     function migrateTo(address payable to) external {
         require(creator == msg.sender);
         to.transfer(address(this).balance);
