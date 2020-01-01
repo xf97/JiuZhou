@@ -11,4 +11,4 @@ There are seven main bugs with **non-standard token interfaces**:
 
 ### We provide two standard test contracts for ERC20 and ERC721
 
-Bug type: statement bug
+Bug type: feature bug

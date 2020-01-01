@@ -6,4 +6,4 @@ There are four kinds of external visibility required in *Solidity*:
 4. public --- function can be called by external accounts or internal functions
 
 Among them, the **gas** consumption can be saved by declaring the **public** function not used in the contract as **external**.
-Bug type: statement bug
+Bug type: feature bug
