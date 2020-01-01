@@ -11,9 +11,11 @@ of a roll out more than 1 ether.
 
 contract signednessError{
     mapping(address => bool) public transferred;
+    address public owner;
     
-    constructor() public{
-        
+    constructor() public payable{
+        owner = msg.sender;
+        require(msg.value > 0 && msg.value % 1 ether == 0);
     }
     
     function withdrawOnce (int amount) public {

@@ -2,7 +2,7 @@ pragma solidity 0.5.0;
 
 //based on knowsec404
 
-contract Token {
+contract gray_Token {
     mapping(address => uint) public balances;
     uint public totalSupply;
 
@@ -11,7 +11,6 @@ contract Token {
     }
 
     function transfer(address _to, uint _value) public returns (bool) {
-        //The following code can bypass the judgment by integer underflow
         require(balances[msg.sender] > _value); 
         balances[msg.sender] -= _value;
         require(balances[_to] + _value >= balances[_to]);
