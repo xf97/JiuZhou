@@ -1,0 +1,8 @@
+{
+"Name":"Integer truncation error",
+"Characteristic": [
+	{"Characteristic1" : "Casts a long integer to a short integer"},
+	{"Characteristic2" : "The short integer is not accurate enough to accurately save the value of the long integer, so there is a loss of precision after truncation."}
+	],
+"Consequence":"In general, this bug causes a loss of accuracy. When the result of the loss of accuracy is used to calculate the amount of ethers, it causes economic loss,"
+}
