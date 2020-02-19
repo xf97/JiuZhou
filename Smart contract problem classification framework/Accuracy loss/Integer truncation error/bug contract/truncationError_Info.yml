@@ -1,0 +1,5 @@
+BugName: Truncation error
+BugLineNumber: 20
+BugResaon: The truncation error occurs when a longer 
+type is truncated to a shorter type, potentially resulting in a loss of 
+accuracy.
