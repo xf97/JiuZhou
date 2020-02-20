@@ -1,0 +1,6 @@
+BugName: Call information controlled by external
+BugLineNumber: 20
+BugResaon: The address and parameters of the delegate call are controlled by 
+           external input, which is dangerous, meaning that an attacker can 
+           load any piece of code that is executed in this contract.
+ContractSource: https://swcregistry.io/

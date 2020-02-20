@@ -1,0 +1,4 @@
+BugName: Use deprecated built-in symbols
+BugLineNumber:-{13,16,18,20,24,30,31,35,41}
+BugResaon: The Solidity language no longer recommends using some built-in symbols. Using these built-in symbols will reduce the quality of the code, and use alternative versions of them.
+ContractSource: Jiuzhou

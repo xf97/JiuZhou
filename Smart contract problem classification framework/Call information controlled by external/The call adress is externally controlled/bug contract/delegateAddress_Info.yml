@@ -1,0 +1,6 @@
+BugName: Call information controlled by external
+BugLineNumber: 28
+BugResaon: Although the contract specifies the whitelist for the delegate call, 
+           the data for the delegate call is externally controlled. The principal 
+           can call any function he specifies.
+ContractSource: Jiuzhou

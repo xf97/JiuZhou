@@ -1,0 +1,5 @@
+BugName: Call information controlled by external
+BugLineNumber: 20
+BugResaon: Malicious users can make this contract call any function 
+           at any address, which will put the contract into great risk.
+ContractSource: https://swcregistry.io/

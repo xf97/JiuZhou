@@ -1,0 +1,5 @@
+BugName: Hidden built-in symbols
+BugLineNumber: 12
+BugResaon: The owner of FatherContract is overridden and not assigned. 
+           So the onlyOwner doesn't work.
+ContractSource: Jiuzhou

@@ -1,0 +1,5 @@
+BugName: Wrong inheritance order
+BugLineNumber: 28
+BugResaon: Now, you want getNum in C, but you end up with getNum in A because you specified the wrong inheritance order.
+           (A is the last one)
+ContractSource: Jiuzhou
