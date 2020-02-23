@@ -1,0 +1,3 @@
+## Forced accept ethers
+In *Ethereum*, you can forced **ethers** to be sent to an address by **self-destructing** contracts or mining. Even if that address doesn't want to receive **ethers**, don't make the features of the contract dependent on the contract's balance being at a fixed value (==), where an attacker can affect the features of the contract by sending a little bit of **ethers**.
+Bug type: context-related bug
