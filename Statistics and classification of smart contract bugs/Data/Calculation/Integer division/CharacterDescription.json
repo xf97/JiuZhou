@@ -1,0 +1,8 @@
+{
+"Name":"Integer division",
+"Characteristic": [
+	{"Characteristic1" : "Calculate the value by dividing two integers"},
+	{"Characteristic2" : "The result of integer division is a decimal, which is truncated to an integer resulting in a loss of accuracy"}
+	],
+"Consequence":"In general, this bug causes a loss of accuracy. When the result of the loss of accuracy is used to calculate the amount of ethers, it causes economic loss,"
+}

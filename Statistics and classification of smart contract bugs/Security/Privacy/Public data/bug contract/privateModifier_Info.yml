@@ -1,0 +1,4 @@
+BugName: Lack of privacy on the blockchain
+BugLineNumber: 11
+BugResaon: Smart contract data is stored in the blockchain. For miners, the data on the blockchain is public, so using smart contracts to save sensitive information such as passwords is risky.
+ContractSource: Jiuzhou

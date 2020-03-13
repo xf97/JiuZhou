@@ -1,0 +1,3 @@
+## Uninitialized local and state variables
+If the local variable is declared but not initialized, the local variable will be set to the default value. In some cases, the functionality of the contract may not match the developer's expectations due to uninitialized variables. In particular, uninitialized address types are particularly dangerous. The initial value of the local variable should be specified clearly, which can reduce the probability of error and make the code better understood.
+Bug type: feature bug

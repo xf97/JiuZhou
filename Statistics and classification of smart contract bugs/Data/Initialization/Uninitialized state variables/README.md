@@ -1,0 +1,3 @@
+## Uninitialized state variables
+The contract declares state variables, but does not initialize them, and the state variables are assigned default values. In some cases, this may cause the behavior of the contract to differ from the developer's expectations. The initial value of the state variable should be specified clearly, which can reduce the probability of error and make the code better understood.
+Bug type: feature bug

@@ -1,0 +1,4 @@
+BugName: Results of contract execution affected by miners
+BugLineNumber: 14
+BugResaon: Miners can control the time of mining to win bonuses.
+ContractSource: https://swcregistry.io/

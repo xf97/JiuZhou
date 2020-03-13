@@ -1,0 +1,5 @@
+BugName: Results of contract execution affected by miners
+BugLineNumber: 37
+BugResaon: Miners can know the value of answer by obtaining 
+           the values of now and block.number, thus gaining a competitive advantage.
+ContractSource: https://swcregistry.io/

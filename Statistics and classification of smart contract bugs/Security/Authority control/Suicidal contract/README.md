@@ -1,0 +1,3 @@
+## Suicidal contract
+Smart contracts are allowed to self-destruct in **Ethereum**, and deposits from the self-destruct contracts will be sent to a designated address (you can force the ethers to be sent to an address by the contract self-destruct). There must be strict permission control over the self-destruct operation, otherwise the contract can be easily killed by an attacker.
+Bug type: context-related bug

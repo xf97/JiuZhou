@@ -1,0 +1,5 @@
+BugName: Continue in do-while
+BugLineNumber: 26
+BugResaon: Prior to Solidity version 0.5.0, executing a continue statement in a do-while statement would cause the conditional judgment to be skipped once, which 
+           in some cases would result in a loss (eg, an infinite loop).
+ContractSource: Jiuzhou

@@ -1,0 +1,3 @@
+## Complex fallback function
+In *Ethereum*, the contract always uses the **fallback function** by default to respond to transfers. In general, most contracts use **send-statements** or **transfer-statements** to send **ethers**, both of which carry only 2300 gas. When the **fallback function** of the contract consumes more than 2300 gas, the transfer will fail. In exceptional circumstances, this will render the external contract dysfunctional and the contract unable to receive transfers.
+Bug type: feature bug

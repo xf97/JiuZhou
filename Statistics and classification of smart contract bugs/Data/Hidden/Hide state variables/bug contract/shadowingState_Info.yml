@@ -1,0 +1,4 @@
+BugName: Hide state variables
+BugLineNumber: 17
+BugResaon: The transfer keyword is overwritten, causing the built-in keyword to fail.
+ContractSource: https://github.com/crytic/slither

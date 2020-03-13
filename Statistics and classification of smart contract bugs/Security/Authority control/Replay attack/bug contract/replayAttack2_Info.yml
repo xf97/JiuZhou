@@ -1,0 +1,5 @@
+BugName: Results of contract execution affected by miners
+BugLineNumber: 27
+BugResaon: In function transferProxy, the nonce value can be pre-judgmented, 
+           so that the transaction can be replayed on another chain through identity verification.
+ContractSource: https://swcregistry.io/

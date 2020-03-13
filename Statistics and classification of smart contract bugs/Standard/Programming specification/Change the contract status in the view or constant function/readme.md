@@ -1,0 +1,4 @@
+## Change the contract status in the view or constant function
+**Note: This bug only exists before Solidity 0.5.0 version**
+The keywords **view** and **constant** (before *Solidity 0.5.0 version*) are provided in *Solidity* to decorate the functions, which means that the functions only read data from the blockchain without modifying the data. However, such a rule is not mandatory, which means that the developer can modify the data in the function declared **view** or **constant**. If your contract requires that the other contract's **view** or **constant** functions cannot modify the data, you should check the other contract manually.
+Bug type: feature bug
