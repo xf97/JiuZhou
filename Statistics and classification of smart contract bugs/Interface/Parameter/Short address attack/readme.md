@@ -1,0 +1,2 @@
+## Short address attack
+When Ethereum packs transaction data, if the data contains the address type and the length of the address type is less than 32 bits, the subsequent data is used to make up the 32 bits. This can be used to launch **short address attack**.
