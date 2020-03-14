@@ -33,3 +33,14 @@ We classify Ethereum smart contract bugs into the following 9 categories:
 In order to express the classification results concisely, we provide the following classification diagrams:
 ![classification](classification.png)
 
+## Test case
+**Jiuzhou**'s test cases come from other Github projects or we write part of them manually. When reprinting test cases from other Github projects, **Jiuzhou** will indicate the source. For test cases that we manually write , we will indicate the source as **Jiuzhou**.
+
+We will partially rewrite test cases from other projects to adapt to the updated **Solidity** language version.
+
+In addition, **Jiuzhou** provides bytecode files for each test case.
+
+### Misleading contract
+Misleading contracts are essentially bug-free contracts, and we wrote them manually. These contracts contain the characteristics of certain bugs, but they are fixed by other statements in the context. Smart contract analysis tools need to avoid misleading by analyzing the contract context and exploring the contract state space as much as possible.
+
+# Lisence
