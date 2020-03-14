@@ -8,7 +8,7 @@
 For more information on Bugs, we have an unfinished [paper](https://github.com/xf97/JiuZhou/blob/master/Jiuzhou__a_classification_framework_for_Ethereum_smart_contract_bugs.pdf).
 
 ## Bug source
-First, we used *smart contract bugs*, *smart contract defects*, *smart contract problems*, and *smart contract vulnerabilities* to retrieve papers published in IEEE and ACM after 2014 to obtain information about Ethereum smart contract bugs.
+First, we used *smart contract bugs*, *smart contract defects*, *smart contract problems*, and *smart contract vulnerabilities* to retrieve papers published in [IEEE](https://ieeexplore.ieee.org/Xplore/home.jsp) and [ACM](https://dl.acm.org/) after 2014 to obtain information about Ethereum smart contract bugs.
 
 Secondly, we use the above four search keywords and *smart contract security* and *smart contract analysis tools* to retrieve Ethereum smart contract projects on Github. We got a total of 266 Github projects, and we manually checked each project to get information about the smart contract bug.
 
@@ -16,4 +16,16 @@ Finally, we also focus on [Github homepage of Ethereum](https://github.com/ether
 
 
 **Jiuzhou** has removed all bugs that have been fixed.
+
+## Bug categories
+We classify Ethereum smart contract bugs into the following 8 categories:
++ **Data**. Bugs in data definition, initialization, mapping, access,   or use, as found in a model, specification, or implementation. 
++ **Interface**. 
++ **Logic**.
++ **Description**.
++ **Standard**.
++ **Security**.
++ **Performance**.
++ **Interaction**
++ **Environment**.
 
