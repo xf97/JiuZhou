@@ -1,0 +1,2 @@
+# Right-To-Left-Override control character (U+202E)
+When printing *U+202E* characters, the character string will be inverted. In some cases, this can cause the true intention of the contract to be hidden.
