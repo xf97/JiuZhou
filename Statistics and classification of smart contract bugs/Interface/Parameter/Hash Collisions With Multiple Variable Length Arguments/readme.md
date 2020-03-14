@@ -1,0 +1,2 @@
+# Hash Collisions With Multiple Variable Length Arguments
+Because *abi.encodePacked()* packs all parameters in order, regardless of whether the parameters are part of an array, the user can move elements within or between arrays. As long as all elements are in the same order, *abi.encodePacked()* will return the same result. In some cases, using *abi.encodePacked()* with multiple variable-length parameters can cause hash collisions.
