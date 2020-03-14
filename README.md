@@ -6,4 +6,12 @@
 **Jiuzhou** provides a brief introduction and test cases for each bug. This helps smart contract developers or researchers understand the current state of security of Ethereum and obtain benchmark data sets for testing smart contract analysis tools.
 
 ## Bug source
+First, we used *smart contract bugs*, *smart contract defects*, *smart contract problems*, and *smart contract vulnerabilities* to retrieve papers published in IEEE and ACM after 2014 to obtain information about Ethereum smart contract bugs.
+
+Secondly, we use the above four search keywords and *smart contract security* and *smart contract analysis tools* to retrieve Ethereum smart contract projects on Github. We got a total of 266 Github projects, and we manually checked each project to get information about the smart contract bug.
+
+Finally, we also focus on [Github homepage of Ethereum](https://github.com/ethereum/), [the development documents of Solidity](https://solidity.readthedocs.io/en/v0.6.0), [ the official blogs of Ethereum](https://blog.ethereum.org/), [the Gitter chat room](https://gitter.im/orgs/ethereum/rooms), [Ethereum Improvement Proposals](https://eips.ethereum.org). From these resources we also get information about the Ethereum smart contract bugs.
+
+
+**Jiuzhou** has removed all bugs that have been fixed.
 
