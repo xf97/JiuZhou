@@ -20,12 +20,12 @@ Finally, we also focus on [Github homepage of Ethereum](https://github.com/ether
 ## Bug categories
 We classify Ethereum smart contract bugs into the following 8 categories:
 + **Data**. Bugs in data definition, initialization, mapping, access,   or use, as found in a model, specification, or implementation. 
-+ **Interface**. 
-+ **Logic**.
-+ **Description**.
-+ **Standard**.
-+ **Security**.
-+ **Performance**.
-+ **Interaction**
-+ **Environment**.
++ **Interface**. Bugs in specification or implementation of an interface. 
++ **Logic**. Bugs in decision logic, branching, sequencing, or computation algorithm, as found in natural language specifications or in implementation language. 
++ **Description**. Bugs in description of software or its use, installation, or operation. 
++ **Standard**. Nonconformity with a defined standard.
++ **Security**. Bugs that threaten contract security, such as authentication, privacy/confidentiality, property.
++ **Performance**. Bugs that cause increased *gas* consumption.
++ **Interaction**. Bugs caused by contract interaction with other accounts.
++ **Environment**. Bugs due to mistakes in the software that supports Ethereum smart contracts.
 
