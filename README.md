@@ -1,7 +1,7 @@
 # JiuZhou(九州)
 **Jiuzhou** is a collection of statistics and classification of Ethereum smart contracts. 
 
-**Jiuzhou** follows the *[IEEE Standard Classification for Software Anomalies](https://ieeexplore.ieee.org/document/5399061)* (1044-2009) and classifies Ethereum smart contract bugs into 8 categories with a total of 50 bugs. 
+**Jiuzhou** follows the *[IEEE Standard Classification for Software Anomalies](https://ieeexplore.ieee.org/document/5399061)* (1044-2009) and classifies Ethereum smart contract bugs into 9 categories with a total of 50 bugs. 
 
 **Jiuzhou** provides a brief introduction and test cases for each bug. This helps smart contract developers or researchers understand the current state of security of Ethereum and obtain benchmark data sets for testing smart contract analysis tools.
 
@@ -18,7 +18,7 @@ Finally, we also focus on [Github homepage of Ethereum](https://github.com/ether
 **Jiuzhou** has removed all bugs that have been fixed.
 
 ## Bug categories
-We classify Ethereum smart contract bugs into the following 8 categories:
+We classify Ethereum smart contract bugs into the following 9 categories:
 + **Data**. Bugs in data definition, initialization, mapping, access,   or use, as found in a model, specification, or implementation. 
 + **Interface**. Bugs in specification or implementation of an interface. 
 + **Logic**. Bugs in decision logic, branching, sequencing, or computation algorithm, as found in natural language specifications or in implementation language. 
@@ -28,4 +28,8 @@ We classify Ethereum smart contract bugs into the following 8 categories:
 + **Performance**. Bugs that cause increased *gas* consumption.
 + **Interaction**. Bugs caused by contract interaction with other accounts.
 + **Environment**. Bugs due to mistakes in the software that supports Ethereum smart contracts.
+
+## Classification diagram
+In order to express the classification results concisely, we provide the following classification diagrams:
+![classification](classification.png)
 
