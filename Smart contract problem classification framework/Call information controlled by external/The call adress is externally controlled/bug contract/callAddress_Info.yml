@@ -1,5 +1,0 @@
-BugName: Call information controlled by external
-BugLineNumber: 13
-BugResaon: Malicious users can cause contracts to call fixed functions 
-           at arbitrary addresses. In some cases, this puts the contract at risk.
-ContractSource: Jiuzhou

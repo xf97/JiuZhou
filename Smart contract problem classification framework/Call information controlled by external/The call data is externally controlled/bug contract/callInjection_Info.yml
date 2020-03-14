@@ -1,5 +1,0 @@
-BugName: Call information controlled by external
-BugLineNumber: 19
-BugResaon: an external user can call the secret function 
-           as the contract by specifying parameters to the info function.
-ContractSource: https://github.com/knownsec/Ethereum-Smart-Contracts-Security-CheckList
