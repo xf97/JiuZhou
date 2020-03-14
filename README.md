@@ -1,4 +1,5 @@
 # JiuZhou(九州)
+![logo](logo.jpg)
 **Jiuzhou** is a collection of statistics and classification of Ethereum smart contracts. 
 
 **Jiuzhou** follows the *[IEEE Standard Classification for Software Anomalies](https://ieeexplore.ieee.org/document/5399061)* (1044-2009) and classifies Ethereum smart contract bugs into 9 categories with a total of 50 bugs. 
