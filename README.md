@@ -1,2 +1,6 @@
 # JiuZhou(九州)
-**JiuZhou** is a collection of Ethereum problem smart contracts. The reason why it is named **JiuZhou** is that in ancient Chinese legends, **JiuZhou** is the land of the world, all living things grow on **JiuZhou**. We hope to make this data set the standard to judge the ability of Ethereum smart contract analysis tool. In addition, we will provide abstract representations of each problem, which can promote the continuous development of this field.
+**Jiuzhou** is a collection of statistics and classification of Ethereum smart contracts. 
+
+**Jiuzhou** follows the *IEEE Standard Classification for Software Anomalies* (1044-2009) and classifies Ethereum smart contract bugs into 8 categories with a total of 50 bugs. 
+
+**Jiuzhou** provides a brief introduction and test cases for each bug. This helps smart contract developers or researchers understand the current state of security of Ethereum and obtain benchmark data sets for testing smart contract analysis tools.
