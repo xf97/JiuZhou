@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //I will send 1 ether to each of my business partners.
 
@@ -30,7 +30,7 @@ contract gray_MyBonus{
             if(myPartners[i] == _badGuy){
                 delete myPartners[i];
                 shiftElement(i, myPartners.length);
-                myPartners.length--;
+                myPartners.pop();
             }
         }
     }
