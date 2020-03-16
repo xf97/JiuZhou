@@ -1,1 +1,0 @@
-Sorry when we tried to get bytecode for D, the compiler worked fine but didn't produce bytecode, so we'll try something else.

@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 contract HiddenBuiltinSymbols {
     address public owner;
@@ -9,13 +9,14 @@ contract HiddenBuiltinSymbols {
     }
     
     //Hidden built-in symbols
-    function transfer(uint256 money) external returns(uint256){
-        return money + 10;
+    function gasleft() external returns(uint256){
+        return 10;
     }
     
-    //so the owner cann't take his money back
     function withdraw() external{
         require(msg.sender == owner);
-        msg.sender.transfer(address(this).balance);
+        //always false
+        if (gasleft() >= 2300 )
+            msg.sender.transfer(address(this).balance);
     }
 }

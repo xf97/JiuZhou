@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.5.16;
 
 
 contract gray_FatherContract{
@@ -10,7 +10,7 @@ contract gray_FatherContract{
 }
 
 
-contract gray_SonContract is gray_FatherContract{
+contract NoSonContract is gray_FatherContract{
     address _owner;     //another name
     constructor() public{
         _owner = msg.sender;
