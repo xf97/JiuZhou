@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //If you have to use integer division, multiplication before division can effectively reduce the loss of accuracy.
 

@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 
 /*
@@ -31,7 +31,7 @@ contract getWageNumber {
         coefficient = _co;
     }
     
-    function calculateWage(uint256 dayNumber) external onlyOwner returns (uint256) {
+    function calculateWage(uint256 dayNumber) external view onlyOwner returns (uint256) {
         uint256 baseWage = DailyWage / coefficient;
         return baseWage * dayNumber;
     }

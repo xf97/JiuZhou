@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 /*
 Another way to deal with overflows and underflows is to use the safemath library, 
