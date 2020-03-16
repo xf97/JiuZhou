@@ -1,2 +1,0 @@
-## Signature with wrong parameter
-*keccak256()* and *ecrecover()* are built-in functions. *keccak256()* calculates the signature of the public key, while *ecrecover()* uses the signature to recover the public key. *ecrecover()* returns 0x0 when the parameters are incorrectly. If the address given externally is 0x0, it can pass the authentication.
