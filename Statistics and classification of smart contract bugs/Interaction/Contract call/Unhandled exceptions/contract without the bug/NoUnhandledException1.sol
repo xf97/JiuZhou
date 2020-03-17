@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 contract gray_xfBank{
     mapping(address => uint256) public ledger;

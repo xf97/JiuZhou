@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 /*
 Let's say Bob solves a problem, and he puts the answer of the problem 

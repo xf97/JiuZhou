@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //based on swc
 
@@ -14,7 +14,7 @@ contract gray_Proxy {
   }
 
   function forward() external {
-    owner.delegatecall(data);
+    owner.call(data);
   }
   
   function withdraw() external{
