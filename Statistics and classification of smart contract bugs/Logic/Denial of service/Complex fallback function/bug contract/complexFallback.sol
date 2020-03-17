@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 /*
 The fallback function should
@@ -33,7 +33,7 @@ contract complexFallback{
     and when the array size is large, it will consume a large 
     amount of gas.
     */
-    function() external payable{
+    fallback() external payable{
         require(msg.value > 0);
         for(uint256 i = 0; i < payer.length; i++){
             if(msg.sender == payer[i])

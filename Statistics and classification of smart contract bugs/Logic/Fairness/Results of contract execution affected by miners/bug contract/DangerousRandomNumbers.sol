@@ -1,27 +1,25 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
-//based on swc
+//based on SWC
 
-/*
-The global variables that are most easily controlled by the miner are timestamp(now) and block.number. Try to avoid the influence of these two variables on the execution result of the contract.
-*/
+contract Gray_refunder {
+    mapping (address => uint) public refunds;
+    address public owner;
 
-
-contract GuessTheRandomNumberChallenge {
-    bytes32 public answer;
-    constructor() public payable {
-        require(msg.value == 1 ether);
-        answer = keccak256(abi.encode(blockhash(block.number - 1), now));
+    constructor() public payable{
+        require(msg.value > 0);
+        owner = msg.sender;
     }
 
-    function isComplete() public view returns (bool) {
-        return address(this).balance == 0;
+    function giveMeMoney() external payable{
+        require(msg.value > 0);
+        refunds[msg.sender] = msg.value;
     }
-
-    function guess(bytes32 n) public payable {
-        require(msg.value == 1 ether);
-        if (n == answer) {
-            msg.sender.transfer(2 ether);
-        }
+    
+    //good 
+    //Let the user pick it up instead of us delivering it
+    function refundOne() external{
+        require(refunds[msg.sender] != 0);
+        msg.sender.transfer(refunds[msg.sender]);
     }
 }

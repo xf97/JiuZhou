@@ -1,4 +1,4 @@
-pragma solidity 0.4.24;
+pragma solidity 0.4.26;
 
 
 contract varIsNotSafe{
@@ -16,14 +16,16 @@ contract varIsNotSafe{
         balances.push(msg.value);
     }
     
-    //warning: Do not use the following loop for a refund because you do not know who did not receive a refund.
     //Error:When the length of the user array is greater than 255, the refund loop is an infinite loop and the 
     //refund operation never takes effect. Because the type i is inferred to be uint8, the maximum value is 255.
     function refundAll() external{
         require(msg.sender == owner);
         uint256 _length = user.length;
         for(var i = 0; i < _length; i++){
-            user[i].send(balances[i]);
+            bool flag = user[i].send(balances[i]);
+            if(flag){
+                balances[i] = 0;
+            }
         }
     }
 }

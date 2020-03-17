@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 /*
 The fallback function should
@@ -41,7 +41,7 @@ contract gray_complexFallback{
         }
     }
     
-    function() external payable{
+    fallback() external payable{
         
     }
 }

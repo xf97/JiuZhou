@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //from smartcheck
 /*
@@ -24,7 +24,9 @@ contract C {
         uint length = amounts.length;
 
         for (uint i = 0; i < length; i++) {
-            flags.push(addresses[i].send(amounts[i]));
+            bool flag = addresses[i].send(amounts[i]);
+            if(flag)
+                flags.push(addresses[i].send(amounts[i]));
         }
     }
     

@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //based on swc 
 
@@ -11,7 +11,7 @@ contract Wallet {
         owner = msg.sender;
     }
 
-    function () external payable {
+    fallback () external payable {
     }
 
     //only owner can write data into this array.
@@ -19,12 +19,12 @@ contract Wallet {
         require(msg.sender == owner);
         bonusCodes.push(c);
     }
-	
+    
     //only owner can write data into this array.
     function PopBonusCode() public {
         require(msg.sender == owner);
-        require(0 < bonusCodes.length);	//now, the minimum value of length is zero, not -1
-        bonusCodes.length--;
+        require(0 < bonusCodes.length); //now, the minimum value of length is zero, not -1
+        bonusCodes.pop();
     }
 
     function UpdateBonusCodeAt(uint256 idx, uint c) public {

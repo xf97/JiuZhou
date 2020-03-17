@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //based on swc
 //Unsafe array manipulation and arbitrary write storage locations
@@ -12,7 +12,7 @@ contract Wallet {
         owner = msg.sender;
     }
 
-    function () external payable {
+    fallback () external payable {
     }
     
     //anyone can write data into this array
@@ -23,12 +23,12 @@ contract Wallet {
     //bonusCodes.length can be underflow
     function PopBonusCode() public {
         require(0 <= bonusCodes.length);
-        bonusCodes.length--;
+        bonusCodes.pop();
     }
     
     //when bonusCodes.length can be underflow, the require-statement is always true.
     //anyone can write data into this contract
-    function UpdateBonusCodeAt(uint idx, uint c) public {
+    function UpdateBonusCodeAt(uint idx, uint c) external {
         require(idx < bonusCodes.length);
         bonusCodes[idx] = c;
     }

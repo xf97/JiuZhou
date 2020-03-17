@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //When you add 1 to each element of a large array of integers, break the addition step into several steps.
 

@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 
 contract gray_varIsNotSafe{
@@ -25,7 +25,10 @@ contract gray_varIsNotSafe{
         if(boundary > user.length)
             boundary = user.length;
         for(uint256 i = index; i < boundary; i++){
-            user[i].send(balances[i]);
+            bool flag = user[i].send(balances[i]);
+            if(flag){
+                balances[i] = 0; 
+            }
         }
         if(boundary == user.length)
             index = 0;  //reset index

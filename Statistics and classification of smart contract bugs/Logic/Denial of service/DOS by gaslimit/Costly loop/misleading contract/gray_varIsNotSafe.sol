@@ -1,4 +1,4 @@
-pragma solidity 0.4.24;
+pragma solidity 0.4.26;
 
 
 contract gray_varIsNotSafe{
@@ -19,11 +19,11 @@ contract gray_varIsNotSafe{
     function refundAll() external{
         require(msg.sender == owner);
         uint256 _length = user.length;
-        //Overflow occurs when 'i' is less than 0, 
-        //and the overflow value will be greater than or equal to _length,
-        //the loop stops.
         for(var i = _length; i < _length; i--){
-            user[i].send(balances[i]);
+            bool flag = user[i].send(balances[i]);
+            if(flag){
+                balances[i] = 0;
+            }
         }
     }
 }

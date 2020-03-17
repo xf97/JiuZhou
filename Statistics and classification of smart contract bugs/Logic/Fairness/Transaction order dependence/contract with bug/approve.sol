@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //from swc
 //The approve function may be affected by the transaction order dependency.

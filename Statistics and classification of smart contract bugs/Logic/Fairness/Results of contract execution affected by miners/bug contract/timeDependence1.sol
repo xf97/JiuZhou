@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //based on smartcheck
 
@@ -20,5 +20,5 @@ contract Game {
         }
     }
 
-    function () external payable {}
+    fallback () external payable {}
 }

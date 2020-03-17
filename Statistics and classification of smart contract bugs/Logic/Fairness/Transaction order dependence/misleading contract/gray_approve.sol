@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //based on swc
 //The approve function may be affected by the transaction order dependency.
@@ -111,11 +111,11 @@ contract ERC20 {
   function approve(address spender, uint256 value) public returns (bool) {
     require(spender != address(0));
     if(_allowed[msg.sender][spender] == 0)
-    	_allowed[msg.sender][spender] = value;
+      _allowed[msg.sender][spender] = value;
     else if(_allowed[msg.sender][spender] != 0 && value == 0)
-    	_allowed[msg.sender][spender] = 0;
+      _allowed[msg.sender][spender] = 0;
     else
-    	require(false, "The approve function cannot set a non-zero value to another non-zero value!");
+      require(false, "The approve function cannot set a non-zero value to another non-zero value!");
     emit Approval(msg.sender, spender, value);
     return true;
   }

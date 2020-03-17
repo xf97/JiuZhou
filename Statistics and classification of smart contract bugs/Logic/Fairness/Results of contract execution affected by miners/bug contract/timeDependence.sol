@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //based on swc
 
@@ -33,7 +33,7 @@ contract TimedCrowdsale {
     }
 
     //raise money should finish exactly at January 1, 2019
-    function isSaleFinished() private returns (bool) {
+    function isSaleFinished() private view returns (bool) {
         return block.timestamp >= 1546300800;
     }
 }

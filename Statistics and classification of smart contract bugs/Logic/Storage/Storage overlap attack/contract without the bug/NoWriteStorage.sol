@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //based on swc
 //Unsafe array manipulation and arbitrary write storage locations
@@ -13,7 +13,7 @@ contract gray_Wallet {
         PushBonusCode(_bonusCodes);
     }
 
-    function () external payable {
+    fallback () external payable {
     }
     
     //Initial array from the beginning
@@ -25,7 +25,7 @@ contract gray_Wallet {
     //bonusCodes.length can be underflow
     function PopBonusCode() public {
         require(0 <= bonusCodes.length);
-        bonusCodes.length--;
+        bonusCodes.pop();
     }
     
     //when bonusCodes.length can be underflow, the require-statement is always true.

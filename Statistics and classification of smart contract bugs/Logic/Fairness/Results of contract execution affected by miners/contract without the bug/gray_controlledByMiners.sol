@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //based on smartcheck
 /*
@@ -18,5 +18,5 @@ contract gray_Game {
         }
     }
 
-    function () external payable {}
+    fallback () external payable {}
 }

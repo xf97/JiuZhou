@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.5.16;
 
 //based on swc
 //In this code, an attacker can specify a function type as an arbitrary code statement through assembly code.
