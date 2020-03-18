@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //based on swc
 
@@ -48,7 +48,7 @@ contract gray_TestContract is gray_MultiOwnable {
     msg.sender.transfer(address(this).balance);
   }
 
-  function() external payable {
+  fallback() external payable {
   }
 
 }

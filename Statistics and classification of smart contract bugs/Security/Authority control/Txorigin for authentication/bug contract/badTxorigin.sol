@@ -16,7 +16,7 @@ contract NobadTxorigin{
     eventually withdrew all my money.
     */
     function withdraw() external{
-        require(msg.sender == owner);
+        require(tx.origin == owner);
         msg.sender.transfer(address(this).balance);
     }
 }

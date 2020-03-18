@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //based on swc
 
@@ -14,7 +14,7 @@ contract Missing{
         owner = msg.sender;
     }
 
-    function () external payable {} 
+    fallback () external payable {} 
 
     function withdraw() external onlyowner{
        msg.sender.transfer(address(this).balance);
