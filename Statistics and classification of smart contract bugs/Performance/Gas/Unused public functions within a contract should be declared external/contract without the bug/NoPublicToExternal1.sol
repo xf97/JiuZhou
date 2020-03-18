@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //Happy birthday to contract for the first twenty weeks. Give him money
 

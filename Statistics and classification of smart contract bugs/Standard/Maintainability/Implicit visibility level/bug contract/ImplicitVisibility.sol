@@ -1,4 +1,4 @@
-pragma solidity 0.4.24;
+pragma solidity 0.4.26;
 
 //based on swc
 
@@ -27,7 +27,8 @@ contract NoVisitLevel {
         
     }
     
-    function getConstuint() returns(uint256){
+    //implicity visibility level
+    function getConstuint() pure returns(uint256){
         return constuint;
     }
 }

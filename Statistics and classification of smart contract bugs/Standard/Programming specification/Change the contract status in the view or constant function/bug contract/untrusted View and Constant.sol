@@ -1,4 +1,4 @@
-pragma solidity 0.4.24;
+pragma solidity 0.4.26;
 
 //based on slither
 
@@ -20,7 +20,7 @@ contract Constant{
     }
 
     function getPlusTwo() external constant returns(uint){
-    	counter += 2;
-    	return counter;
+        counter += 2;
+        return counter;
     }
 }

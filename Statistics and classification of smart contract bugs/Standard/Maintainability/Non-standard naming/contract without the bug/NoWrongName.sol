@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 contract NoWrongName{
     uint256 public constant BET_PRICE = 0.1 ether;   //should be uppercase and use _ to connect two words

@@ -1,6 +1,6 @@
 // This code contains a vulnerability - do not use it!
 //based on smartcheck
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 contract OpenWallet {
 

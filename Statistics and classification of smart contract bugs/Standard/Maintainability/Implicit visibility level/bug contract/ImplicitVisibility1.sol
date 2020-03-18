@@ -1,9 +1,9 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 //based on swc
 
 contract NoVisitLevel {
-    //The state variable still does not specify visibility
+    //These state variable still does not specify visibility
     uint storeduint1 = 15;
     uint constant constuint = 16;
     uint32 investmentsDeadlineTimeStamp = uint32(now); 

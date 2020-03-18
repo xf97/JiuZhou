@@ -1,9 +1,9 @@
-pragma solidity 0.4.24;
+pragma solidity 0.6.2;
 
-//old things
+//new things
 
 contract Old{
-    address owner;
+    address payable owner;
    bytes32 bytesnum;
    bytes32 hashnum;
 
@@ -26,8 +26,11 @@ contract Old{
     }
     
     function callAnother() public{
+        bool flag;
+        bytes memory data;
+        (flag, data) = owner.call("");
         //callcode and throw are deprecated
-        if(owner.delegatecall("")){
+        if(flag){
             revert();
         }
         else{
@@ -36,7 +39,7 @@ contract Old{
         }
     }
     
-    function () external{
+    fallback () external{
         //msg.gas is deprecated
         uint remainGas = gasleft();
         if(remainGas > 2300){

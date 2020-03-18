@@ -1,4 +1,4 @@
-pragma solidity 0.5.0;
+pragma solidity 0.6.2;
 
 contract NoWaste1{
 	address public owner;
@@ -17,7 +17,7 @@ contract NoWaste1{
 	function addOne() public{
 		for(uint256 i = 0; i < grades.length; i++){
 			grades[i] += 1;
-			grades.length--;	//length became shorter
+			grades.pop();	//length became shorter
 		}
 	}
 
