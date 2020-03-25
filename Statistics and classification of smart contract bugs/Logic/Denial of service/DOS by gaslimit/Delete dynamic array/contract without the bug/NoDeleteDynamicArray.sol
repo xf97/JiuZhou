@@ -1,6 +1,6 @@
 pragma solidity 0.6.2;
 
-//from smartcheck
+//based smartcheck
 /*
 In solidity, deleting a huge map or array often consumes a lot of gas.
 */

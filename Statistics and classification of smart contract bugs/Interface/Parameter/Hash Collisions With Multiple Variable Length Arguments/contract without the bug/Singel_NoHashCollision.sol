@@ -1,6 +1,6 @@
 pragma solidity 0.6.2;
 
-//from https://swcregistry.io/docs/SWC-133#access-controlsol
+//based https://swcregistry.io/docs/SWC-133#access-controlsol
 
 //line 61
 

@@ -1,6 +1,6 @@
 pragma solidity 0.6.2;
 
-//from https://swcregistry.io/docs/SWC-130#guess-the-numbersol
+//based https://swcregistry.io/docs/SWC-130#guess-the-numbersol
 
 //line 31
 

@@ -1,6 +1,6 @@
 pragma solidity 0.6.2;
 
-//from https://github.com/denismp/smart-contract-short-address-attack/blob/master/MyToken.sol
+//based https://github.com/denismp/smart-contract-short-address-attack/blob/master/MyToken.sol
 
 //line 75
 

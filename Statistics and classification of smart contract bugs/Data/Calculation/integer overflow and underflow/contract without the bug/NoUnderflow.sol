@@ -1,5 +1,7 @@
 pragma solidity 0.6.2;
 
+//based on knowsec404
+
 /*
 Another way to deal with overflows and underflows is to use the safemath library, 
 the most popular version of which we use, for integer calculations

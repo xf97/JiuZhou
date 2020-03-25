@@ -1,6 +1,6 @@
 pragma solidity 0.6.2;
 
-//from https://github.com/quantstamp/solidity-analyzer/blob/master/test/inputs/input1.sol
+//based https://github.com/quantstamp/solidity-analyzer/blob/master/test/inputs/input1.sol
 
 //line 14
 

@@ -1,6 +1,6 @@
 pragma solidity 0.6.2;
 
-//from https://swcregistry.io/docs/SWC-123#requirement-simplesol
+//based https://swcregistry.io/docs/SWC-123#requirement-simplesol
 
 //line 10, 18
 
