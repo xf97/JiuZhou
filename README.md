@@ -8,7 +8,7 @@
 **Jiuzhou** provides a brief introduction and test cases for each bug. This helps smart contract developers or researchers understand the current state of security of Ethereum and obtain benchmark data sets for testing smart contract analysis tools.
 
 ```
-graph TB
+graph LR
 A[smart contract bug classification]-->B[category]
 ```
 
