@@ -7,10 +7,10 @@
 
 **Jiuzhou** provides a brief introduction and test cases for each bug. This helps smart contract developers or researchers understand the current state of security of Ethereum and obtain benchmark data sets for testing smart contract analysis tools.
 
-'''
+```
 graph TB
 A[smart contract bug classification]-->B[category]
-'''
+```
 
 For more information on Bugs, we have an unfinished [paper](https://github.com/xf97/JiuZhou/blob/master/Jiuzhou__a_classification_framework_for_Ethereum_smart_contract_bugs.pdf).
 
