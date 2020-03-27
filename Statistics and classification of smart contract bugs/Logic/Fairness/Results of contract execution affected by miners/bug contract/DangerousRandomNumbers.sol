@@ -1,25 +1,24 @@
 pragma solidity 0.6.2;
 
-//based on SWC
+//base swc
 
-contract Gray_refunder {
-    mapping (address => uint) public refunds;
-    address public owner;
+contract GuessTheRandomNumberChallenge {
+    bytes32 answer;
 
-    constructor() public payable{
-        require(msg.value > 0);
-        owner = msg.sender;
+    constructor() public payable {
+        require(msg.value == 1 ether);
+        answer = keccak256(abi.encode(blockhash(block.number - 1), now));
     }
 
-    function giveMeMoney() external payable{
-        require(msg.value > 0);
-        refunds[msg.sender] = msg.value;
+    function isComplete() public view returns (bool) {
+        return address(this).balance == 0;
     }
-    
-    //good 
-    //Let the user pick it up instead of us delivering it
-    function refundOne() external{
-        require(refunds[msg.sender] != 0);
-        msg.sender.transfer(refunds[msg.sender]);
+
+    function guess(bytes32 n) public payable {
+        require(msg.value == 1 ether);
+
+        if (n == answer) {
+            msg.sender.transfer(2 ether);
+        }
     }
 }
