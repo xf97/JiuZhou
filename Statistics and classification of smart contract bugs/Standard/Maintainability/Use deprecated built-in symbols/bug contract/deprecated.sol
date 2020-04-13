@@ -32,6 +32,7 @@ contract Old{
         }
         else{
             //suicide is deprecated
+            require(msg.sender == owner);
             suicide(owner);
         }
     }

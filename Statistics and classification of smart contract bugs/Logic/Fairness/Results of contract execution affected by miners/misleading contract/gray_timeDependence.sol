@@ -20,6 +20,6 @@ contract gray_TimeDependce {
         uint256 time = now; //use timestamp but it is unused
         require(msg.value > 0);
         if(msg.value > myNumber)
-            msg.sender.transfer(address(this).balance);
+            msg.sender.transfer(myNumber);
     }
 }

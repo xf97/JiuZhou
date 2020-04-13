@@ -10,7 +10,7 @@ contract gray_Wallet {
     
     mapping(address => uint256) balances;
 
-    constructor() public {
+    function Constructor() public {
         creator = msg.sender;
     }
 
