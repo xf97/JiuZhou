@@ -20,6 +20,7 @@ contract transaction_malleablity{
       public
     returns (bool)
     {
+      //As Ethereum has been divided many times, there are many chains in Ethereum now. Therefore, confirm the non repeatability of the verification to avoid the attacker replaying the transaction on another chain.
       bytes32 txid = keccak256(abi.encodePacked(getTransferHash(_to, _value, _gasPrice, _nonce), _signature));
       require(!signatureUsed[txid]);
 

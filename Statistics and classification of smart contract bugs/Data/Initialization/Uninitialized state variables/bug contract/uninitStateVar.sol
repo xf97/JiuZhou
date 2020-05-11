@@ -3,6 +3,7 @@ pragma solidity 0.6.2;
 //based on slither
 
 contract uninitStateVar{
+    //The contract declares state variables, but does not initialize them, and the state variables are assigned default values. In some cases, this may cause the behavior of the contract to differ from the developer's expectations. The initial value of the state variable should be specified clearly, which can reduce the probability of error and make the code better understood.
     address payable payee;  //uninitialized
     uint256 public _order;  
     event Record(address indexed _donors, uint256 _number, uint256 _money);

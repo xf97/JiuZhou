@@ -22,6 +22,7 @@ contract signednessError{
         if ( amount > 1 ether || transferred [msg.sender]) {
             revert() ;
         }
+        //In Solidity, casting a negative integer to an unsigned integer results in an error and does not throw an exception. Avoid such conversions.
         msg.sender.transfer(uint(amount));
         transferred [msg.sender] = true ;
     }

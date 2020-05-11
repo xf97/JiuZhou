@@ -1,5 +1,7 @@
 pragma solidity 0.4.26;
 
+//Aftet Solidity 0.5.0 version, Solidity does not allow several structures to be used. Even if you don't use a compiler after Solidity 0.5.0 version, you can improve the readability of your code by not using deprecated structures.
+
 //old things
 
 contract Old{

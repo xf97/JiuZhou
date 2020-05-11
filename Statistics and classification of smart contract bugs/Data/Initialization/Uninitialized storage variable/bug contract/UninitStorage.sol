@@ -41,7 +41,8 @@ contract CryptoRoulette {
 
     function play(uint256 number) payable public {
         require(msg.value >= betPrice && number <= 10);
-
+        
+        //Uninitialized storage variables are the most dangerous of all uninitialized bugs because uninitialized storage variables act as references to the first state variable. In some cases, this can cause critical state state variables to be overridden. All storage variables should be initialized to prevent the contract from getting into danger. According to our use, the bug was fixed after Solidity 0.5.0 version.
         Game storage game;  //this is a uninitialized storage variable
         game.player = msg.sender;
         game.number = number;

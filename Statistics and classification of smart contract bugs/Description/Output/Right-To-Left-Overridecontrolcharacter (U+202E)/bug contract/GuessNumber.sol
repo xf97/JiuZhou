@@ -28,6 +28,7 @@ contract GuessTheNumber
         require(msg.value == 1 ether);
         
         uint p = address(this).balance;
+        //When printing U+202E characters, the character string will be inverted. In some cases, this can cause the true intention of the contract to be hidden.
         checkAndTransferPrize(/*The prize‮/*rebmun desseug*/n , p/*‭
                 /*The user who should benefit */,msg.sender);
     }

@@ -23,6 +23,7 @@ contract NestedCall{
     }
     
     //When the loop is executed, an attacker can keep adding array elements, causing the loop to keep running.
+    //Loops are usually the most executed part of a program, and the more statements are executed, the more gas is consumed. If the transaction contains an infinite loop, the transaction will fail after exhausting the gas paid by the caller, and gas will not be refunded. You should avoid the huge loop in contracts, and if you have to, try breaking the loop into pieces.
     function addOne() public onlyOwner{
         require(msg.sender == owner);
         for(uint256 i = 0; i < element.length; i++)

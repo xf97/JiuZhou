@@ -1,2 +1,2 @@
 ## Non-public variables are accessed by public/external functions
-*Solidity* language requires visibility of specified state variables, of which **internal** and **private** specify that state variables can only be accessed internally. But developers can still use the **public** or     **external** functions to access the **internal** and **private** state variables, which may lead to accidental exposure of privacy.
+*Solidity* language requires visibility of specified state variables, of which **internal** and **private** specify that state variables can only be accessed internally. But developers can still use the **public** or **external** functions to access the **internal** and **private** state variables, which may lead to accidental exposure of privacy.

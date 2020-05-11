@@ -1,0 +1,2 @@
+# Pre-sent ethers
+An attacker can force Ether to an address. If the deployment address of your contract can be predicted, and the contract assumes an initial deposit of 0, then an attacker can interfere with your contract by sending Ether in advance.

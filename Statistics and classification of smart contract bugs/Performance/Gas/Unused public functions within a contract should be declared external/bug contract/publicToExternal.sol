@@ -1,6 +1,7 @@
 pragma solidity 0.6.2;
 
 //Happy birthday to contract for the first twenty in a week. Give him money
+//the gas consumption can be saved by declaring the public function not used in the contract as external.
 
 contract waste3{
     uint256 public contractBirthday;

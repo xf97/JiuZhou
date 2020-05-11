@@ -8,6 +8,7 @@ contract HardCodeAddress {
     
     //if the address is wrong, the contract fails.
     constructor() public  {
+        //The call fails when the address with which it interacts does not exist or when a contract exception occurs.
         owner = 0x5aAeb6053F3E94C9b9A09f33669435E7Ef1BeAed;
         rate = 0;
         cap = 0;

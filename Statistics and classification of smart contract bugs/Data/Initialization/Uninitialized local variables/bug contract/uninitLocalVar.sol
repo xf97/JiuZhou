@@ -13,6 +13,7 @@ contract uninitStateLocalVar{
     }
     //The local variable "number" is not initialized, so "number" always is 0.
     function giveMeMoney() external payable{
+    //If the local variable is declared but not initialized, the local variable will be set to the default value. In some cases, the functionality of the contract may not match the developer's expectations due to uninitialized variables. In particular, uninitialized address types are particularly dangerous. The initial value of the local variable should be specified clearly, which can reduce the probability of error and make the code better understood.
         uint256 number;
         _order += 1;
         require(msg.value > 0);

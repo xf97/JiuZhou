@@ -2,6 +2,8 @@ pragma solidity 0.4.26;
 
 //based on swc
 
+//Prior to Solidity 0.5.0 version, you could not explicitly specify the visibility of state variables and functions, which would be given by default (after 0.5.0, functions must specify visibility). Not explicitly specifying visibility makes the code hard to understand, and state variables that do not explicitly specify visibility are set to private.
+
 contract NoVisitLevel {
     uint storeduint1 = 15;
     uint constant constuint = 16;

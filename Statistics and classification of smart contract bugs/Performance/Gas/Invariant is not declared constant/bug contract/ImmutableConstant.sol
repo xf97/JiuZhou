@@ -4,6 +4,7 @@ pragma solidity 0.6.2;
 //This contract seems illegal
 
 contract waste4{
+    //By declaring invariants as constant, that can reduce the gas consumption of deployment contracts. Try to declare all invariants as constant.
     uint256 public ticket = 1 ether;    //Should be declared constant
     uint256 public earnings = 0.1 ether;    //Should be declared constant
     uint256 public number = 0;

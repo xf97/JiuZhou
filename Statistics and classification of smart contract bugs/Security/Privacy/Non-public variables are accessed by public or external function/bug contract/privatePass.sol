@@ -12,6 +12,7 @@ contract privatePass {
   }
   
   //external function accesses private variable
+  //Solidity language requires visibility of specified state variables, of which internal and private specify that state variables can only be accessed internally. But developers can still use the public or external functions to access the internal and private state variables, which may lead to accidental exposure of privacy.
   function resetOwner() external {
   	owner = 0;
   }

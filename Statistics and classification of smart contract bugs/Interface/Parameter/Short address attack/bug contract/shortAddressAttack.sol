@@ -72,6 +72,7 @@ contract ShortAddress {
     }
 
     //This function does not check the length of the data, so it may be attacked by a short address.
+    //When Ethereum packs transaction data, if the data contains the address type and the length of the address type is less than 32 bits, the subsequent data is used to make up the 32 bits. This can be used to launch short address attack.
     function sendCoin(address to, uint amount) public returns (bool sufficient) {
         if(balances[msg.sender] < amount) return false;
         balances[msg.sender] = balances[msg.sender].sub(amount);

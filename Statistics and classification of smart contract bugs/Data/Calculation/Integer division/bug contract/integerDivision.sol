@@ -32,6 +32,7 @@ contract getWageNumber {
     }
     
     function calculateWage(uint256 dayNumber) external view onlyOwner returns (uint256) {
+    //Until now, Solidity doesn't support decimals or fixed-point numbers, and all integer division results are rounded down, which can lead to a loss of accuracy. Avoid using integer division to calculate the amount of ethers. If you have to, try multiplying before dividing to offset the loss of accuracy.
         uint256 baseWage = DailyWage / coefficient;
         return baseWage * dayNumber;
     }

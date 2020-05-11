@@ -1,5 +1,7 @@
 pragma solidity 0.6.2;
 
+//Solidity specifies the standard naming style, which makes the source code easier to understand. Try naming using the standard naming style.
+
 contract WrongName{
     uint256 public constant betprice = 0.1 ether;   //should be uppercase and use _ to connect two words
     address[] public users;

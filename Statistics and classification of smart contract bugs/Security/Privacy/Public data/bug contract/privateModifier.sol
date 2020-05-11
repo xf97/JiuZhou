@@ -2,6 +2,8 @@
 //based on smartcheck
 pragma solidity 0.6.2;
 
+//Because Ethereum is based on the blockchain, miners have a full backup of the network data. For miners, all contract codes and variables are visible, even if external visibility is specified using private. Don't use smart contracts to store passwords or valuable puzzle answers.
+
 contract OpenWallet {
 
     struct Wallet {

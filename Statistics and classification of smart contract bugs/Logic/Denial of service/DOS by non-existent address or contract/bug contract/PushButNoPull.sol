@@ -15,6 +15,7 @@ mapping (address => uint) public refunds;
     // bad
     function refundAll() public {
         for(uint256 x = 0; x < refundAddresses.length; x++) { // arbitrary length iteration based on how many addresses participated
+            //The call fails when the address with which it interacts does not exist or when a contract exception occurs.
             require(refundAddresses[x].send(refunds[refundAddresses[x]])); // doubly bad, now a single failure on send will hold up all funds
         }
     }

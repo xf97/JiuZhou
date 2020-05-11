@@ -1,5 +1,7 @@
 pragma solidity 0.5.16;
 
+//In order to facilitate the interaction of token contracts in Ethereum, some token contract standards have been established. These standards specify the state variables, functions and event information that should be included in the token contracts. Following these standards to develop token contracts enables your contract to interact with other contracts.
+
 /**
  * Utility library of inline functions on addresses
  */

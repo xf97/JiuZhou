@@ -8,6 +8,7 @@ contract HoneyPot {
 
     constructor () public payable {
         bytes memory contract_identifier = ID;
+        //The contract is not fully formed when the constructor is executing. Returning the result in the constructor makes the contract deployment process inconsistent with the intuitive experience.
         assembly { return(add(0x20, contract_identifier), mload(contract_identifier)) }
     }
 

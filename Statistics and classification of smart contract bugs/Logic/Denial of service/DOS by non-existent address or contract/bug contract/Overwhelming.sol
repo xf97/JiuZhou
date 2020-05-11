@@ -8,6 +8,7 @@ contract Crowdsale {
     address public owner;
     
     //if "_user" is wrong, the contract fails.
+    //The call fails when the address with which it interacts does not exist or when a contract exception occurs.
     constructor(address _user) public  {
         owner = _user;
         rate = 0;

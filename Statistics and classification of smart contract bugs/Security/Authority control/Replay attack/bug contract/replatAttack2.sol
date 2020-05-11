@@ -24,6 +24,7 @@ contract proxy{
             || _fee > _fee + _value) revert();
 
         uint256 nonce = nonces[_from];
+        //As Ethereum has been divided many times, there are many chains in Ethereum now. Therefore, confirm the non repeatability of the verification to avoid the attacker replaying the transaction on another chain.
         bytes32 h = keccak256(abi.encode(_from,_to,_value,_fee,nonce,address(this)));
         if(_from != ecrecover(h,_v,_r,_s)) revert();
 

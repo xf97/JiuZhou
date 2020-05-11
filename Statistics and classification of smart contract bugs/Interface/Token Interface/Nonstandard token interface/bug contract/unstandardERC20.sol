@@ -1,5 +1,7 @@
 pragma solidity 0.6.2;
 
+//In order to facilitate the interaction of token contracts in Ethereum, some token contract standards have been established. These standards specify the state variables, functions and event information that should be included in the token contracts. Following these standards to develop token contracts enables your contract to interact with other contracts.
+
 interface tokenRecipient { 
     function receiveApproval(address _from, uint256 _value, address _token, bytes calldata _extraData) external; 
     

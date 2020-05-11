@@ -17,6 +17,7 @@ contract Proxy {
   }
 
   function forward(address callee, bytes calldata data) external {
+    //If both the call data and the call address are externally controlled, this is a great danger. This means that the attacker can specify the call address (which can be the attacking contract he developed), the call function and the parameters (which can be the attacking function in the contract and the appropriate parameters) at will, making the contract very dangerous.
     callee.delegatecall(data);
   }
   

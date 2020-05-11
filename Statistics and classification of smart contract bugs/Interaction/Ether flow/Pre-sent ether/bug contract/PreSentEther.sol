@@ -16,6 +16,7 @@ contract PreSentEther{
     //address of this contract and sends some Ethers 
     //to the address in advance, this function will fail.
     function depositOnce() external payable{
+        //An attacker can force ethers to an address. If the deployment address of your contract can be predicted, and the contract assumes the initial balance of 0, then the attacker can interfere with your contract by sending ethers in advance.
         require(address(this).balance == 0);
         money += msg.value;
     }

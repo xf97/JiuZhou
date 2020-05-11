@@ -16,6 +16,7 @@ contract waste1{
 
 	//The array length is calculated for each loop, but the array length remains the same
 	function addOne() public{
+		//Extracting invariants from loops is a widely used method to optimize performance. In Ethereum, this action can also reduce the loss of gas. 
 		for(uint256 i = 0; i < grades.length; i++){
 			grades[i] += 1;
 		}
