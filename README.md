@@ -34,7 +34,7 @@ We classify Ethereum smart contract bugs into the following 9 categories:
 
 ## Classification diagram
 In order to express the classification results concisely, we provide the following classification diagrams:
-![classification](classification.png)
+![classification](classification.jpg)
 
 ## Test case
 **Jiuzhou**'s test cases come from other Github projects or we write part of them manually. When reprinting test cases from other Github projects, **Jiuzhou** will indicate the source. For test cases that we manually write , we will indicate the source as **Jiuzhou**.
