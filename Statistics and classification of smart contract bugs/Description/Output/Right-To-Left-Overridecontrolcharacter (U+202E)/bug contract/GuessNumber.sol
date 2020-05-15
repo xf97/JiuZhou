@@ -2,7 +2,7 @@ pragma solidity 0.6.2;
 
 //based https://swcregistry.io/docs/SWC-130#guess-the-numbersol
 
-//line 31
+//line 32
 
 contract GuessTheNumber
 {
