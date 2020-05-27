@@ -14,6 +14,12 @@ contract B is A{
 }
 
 contract C is A{
+    function setNum() public{
+        num += 10;
+    }
+}
+
+contract D is C{
     function getNum() view public returns(uint256){
         return num + 10;
     }
@@ -26,7 +32,7 @@ in A because you specified the wrong inheritance order.
 */
 
 //Solidity supports multiple inheritance, and when you have a function or variable of the same name in your base class, the order of inheritance matters, which determines which one will be integrated into the subclass. The wrong inheritance sequence will result in the functionality of the contract not being what the developer expected.
-contract D is C, B{
+contract E is D, B{
     address public owner;
     constructor() public{
         owner = msg.sender;
