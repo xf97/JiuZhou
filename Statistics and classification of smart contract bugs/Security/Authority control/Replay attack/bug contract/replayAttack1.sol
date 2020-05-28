@@ -31,6 +31,7 @@ contract transaction_malleablity{
       balances[_to] += _value;
 
       signatureUsed[txid] = true;
+      return true;
     }
 
     function recoverTransferPreSigned(

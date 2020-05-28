@@ -16,13 +16,13 @@ contract Wallet {
     }
     
     //anyone can write data into this array
-    function PushBonusCode(uint c) public {
+    function PushBonusCode(uint c) external {
         //All data in a smart contract share a single storage space, and if data is arbitrarily written to the storage, it can cause data to overwrite each other. There is no problem writing to the store, but authentication is required and only a few people can write to the store.
         bonusCodes.push(c);
     }
 
     //bonusCodes.length can be underflow
-    function PopBonusCode() public {
+    function PopBonusCode() external {
         require(0 <= bonusCodes.length);
         bonusCodes.pop();
     }
