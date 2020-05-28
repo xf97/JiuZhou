@@ -14,12 +14,12 @@ contract HardCodeAddress {
         cap = 0;
     }
 
-    function setRate(uint256 _rate) public  {
+    function setRate(uint256 _rate) external {
         require(owner == msg.sender);
         rate = _rate;
     }
 
-    function setCap(uint256 _cap) public {
+    function setCap(uint256 _cap) external {
         require (msg.sender == owner);
         cap = _cap;
     }
