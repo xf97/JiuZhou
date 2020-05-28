@@ -30,7 +30,7 @@
 {"file":".\\Statistics and classification of smart contract bugs\\Logic\\Assembly code\\Any type of specified function variable\\bug contract\\ArbitraryFunctionType.sol", "location": 28},
 {"file":".\\Statistics and classification of smart contract bugs\\Logic\\Assembly code\\Use assembly code return in the constructor\\bug contract\\returnInCons.sol", "location": 12},
 {"file":".\\Statistics and classification of smart contract bugs\\Logic\\Denial of service\\Complex fallback function\\bug contract\\complexFallback.sol", "location": 37},
-{"file":".\\Statistics and classification of smart contract bugs\\Logic\\Denial of service\\DOS by gaslimit\\Costly loop\\bug contract\\infiniteLoop.sol", "location": 33},
+{"file":".\\Statistics and classification of smart contract bugs\\Logic\\Denial of service\\DOS by gaslimit\\Costly loop\\bug contract\\infiniteLoop.sol", "location": 32},
 {"file":".\\Statistics and classification of smart contract bugs\\Logic\\Denial of service\\DOS by gaslimit\\Costly loop\\bug contract\\NestedCall.sol", "location": 27},
 {"file":".\\Statistics and classification of smart contract bugs\\Logic\\Denial of service\\DOS by gaslimit\\Costly loop\\bug contract\\varIsNotSafe.sol", "location": 25},
 {"file":".\\Statistics and classification of smart contract bugs\\Logic\\Denial of service\\DOS by gaslimit\\Delete dynamic array\\bug contract\\deleteDynamicArray.sol", "location": [33, 34]},

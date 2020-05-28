@@ -23,7 +23,6 @@ contract CostlyLoop{
     }
     
     function addOne() public onlyOwner{
-        require(msg.sender == owner);
         uint256 _length = element.length;
         /*
         When the length of the array is greater than or equal to 256, 
