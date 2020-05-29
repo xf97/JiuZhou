@@ -16,4 +16,8 @@ contract privatePass {
   function resetOwner() external {
   	owner = 0;
   }
+
+  function getOwner() external returns(uint256){
+  	return owner;
+  }
 }
