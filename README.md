@@ -8,7 +8,7 @@
 **Jiuzhou** provides a brief introduction and test cases for each bug. This helps smart contract developers or researchers understand the current state of security of Ethereum and obtain benchmark data sets for testing smart contract analysis tools.
 
 
-For more information on Bugs, we have an unfinished [paper](https://github.com/xf97/JiuZhou/blob/master/Jiuzhou__a_classification_framework_for_Ethereum_smart_contract_bugs.pdf).
+For more information on Bugs, we have a [paper](https://github.com/xf97/JiuZhou/blob/master/Jiuzhou__a_classification_framework_for_Ethereum_smart_contract_bugs.pdf).
 
 ## Bug source
 First, we used *smart contract bugs*, *smart contract defects*, *smart contract problems*, and *smart contract vulnerabilities* to retrieve papers published in [IEEE](https://ieeexplore.ieee.org/Xplore/home.jsp) and [ACM](https://dl.acm.org/) after 2014 to obtain information about Ethereum smart contract bugs.
