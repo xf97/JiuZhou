@@ -1,0 +1,73 @@
+{
+  "insertFunc": [
+		{"type": "getIntFunction",
+		"functionHeadAndBody": "\tfunction getIntFunc(uint256 index) internal view returns(uint256){\n \t\treturn _integer_constant[index];\n \t}\n" 
+		},
+		{"type":"getStrFunction",
+		"functionHeadAndBody": "\tfunction getStrFunc(uint256 index) internal view returns(string storage){\n \t\treturn _string_constant[index];\n \t}\n"
+		},
+		{"type":"getAddrFunction", 
+   		"functionHeadAndBody": "\tfunction getAddrFunc(uint256 index) internal view returns(address payable){\n \t\treturn _address_constant[index];\n \t}\n"
+		},
+		{"type":"getBoolFunction",
+		 "functionHeadAndBody": "\tfunction getBoolFunc(uint256 index) internal view returns(bool){\n \t\treturn _bool_constant[index];\n \t}\n"
+		}
+  ],
+  "insertVariable": [
+	{"type": "UintArrayDeclare",
+	 "variableDeclaration": "\tuint256[] public _integer_constant = ["
+	},
+	{"type": "StringArrayDeclare",
+	 "variableDeclaration": "\tstring[] public _string_constant = ["
+	},
+	{"type": "AddressArrayDeclare",
+	 "variableDeclaration": "\taddress payable[] public _address_constant = ["
+	},
+	{"type": "BoolArrayDeclare",
+	 "variableDeclaration": "\tbool[] public _bool_constant = ["
+	}
+   ],
+  "boolExpressions": [
+	{"value": "false",
+	 "text": "false"
+	},
+	{"value": "true",
+	 "text": "true"
+	},
+	{"value": "false",
+	 "text": "(true && false)"
+	},
+	{"value": "true",
+	 "text": "(true || false)"
+	},
+	{"value": "true",
+	 "text": "(true || !false)"
+	},
+	{"value": "true",
+	 "text": "(true && !false && true)"
+	},
+	{"value": "true",
+	 "text": "(!true && false) || true"
+	},
+	{"value": "true",
+	 "text": "(true || false || true) && (false || true || false)"
+	},
+	{"value": "false",
+	 "text": "(true || false || true) && (false || false || false)"
+	},
+	{"value": "false",
+	 "text": "!(!(true || false))"
+	},
+	{"value": "false",
+	 "text": "!(!(true || false))"
+	},
+	{"value": "false",
+	 "text": "!(true || false)"
+	}
+  ],
+ "variableNaming": [
+	"BiAnIsACodeObfuscationToolForSoliditySmartContracts", "JiuZhouIsADataSetOfEthereumBugSmartContracts", "SolidityCheckIsAStaticCodeProblemDetectionToolBasedOnRegularExpressionsAndProgramInstrumentationWhichIsDevelopedForEthereumSmartContracts"
+ ],
+ "insertStructPrefix": "\tstruct scalar2Vector {\n\t\t",
+ "insertStructSuffix": "\n\tscalar2Vector s2c = scalar2Vector("
+}
