@@ -2,13 +2,13 @@ pragma solidity 0.6.2;
 
 //from Jiuzhou
 
-//line 18
+//line 20
 
 contract PreSentEther{
     address public owner;
     uint256 public money;
     constructor() public{
-        owner == msg.sender;
+        owner = msg.sender;
         money = 0;
     }
     
